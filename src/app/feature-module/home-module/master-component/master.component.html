@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span (click)="onMaster()">سیستم ....</span>
+        <span class="example-fill-remaining-space"></span>
+        <span class="align-center"></span>
+        <span class="example-spacer"></span>
+        <button mat-button>درباره ما</button>
+        <button (click)="onLogin()" mat-button>ورود به سیستم</button>
+    </mat-toolbar-row>
+    <mat-card>
+        <mat-card-content>
+            <router-outlet></router-outlet>
+        </mat-card-content>
+    </mat-card>
