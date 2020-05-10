@@ -10,6 +10,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { LibModule } from './feature-module/lib-module';
 import { FormsModule } from '@angular/forms';
 import { AuthenticationGuard } from './core/guards/authentication.guard';
+import { StorageService } from './core/internal-services/storage.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AuthenticationGuard } from './core/guards/authentication.guard';
     BrowserAnimationsModule
   ],
   providers: [
-    AuthenticationGuard
+    AuthenticationGuard,
+    StorageService
   ],
   bootstrap: [AppComponent]
 })
