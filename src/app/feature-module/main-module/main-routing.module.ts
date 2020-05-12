@@ -12,8 +12,8 @@ const routes: Routes = [
     {
         path: '', component: MasterComponent, canActivate: [AuthenticationGuard], children: [
             { path: '', component: DashboardComponent },
-            { path: 'add', component: AddSaleDeadlineComponent },
-            { path: 'list', component: ListSaleDeadlineComponent }
+            { path: 'deadline/add', component: AddSaleDeadlineComponent },
+            { path: 'deadline/list', component: ListSaleDeadlineComponent }
         ],
     },
 ];

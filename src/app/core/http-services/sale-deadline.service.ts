@@ -3,12 +3,12 @@ export class SaleDeadlineService {
   results: SaleDeadlineModel[];
 
   constructor(){
-    const obj = new SaleDeadlineModel();
-    obj.StartDate = '1399/01/01';
-    obj.EndDate = '1399/01/30';
-    obj.SaleTypeCode = 1;
-    obj.DayDeadline = 1;
-    this.results.push(obj);
+    //const obj = new SaleDeadlineModel();
+    //obj.StartDate = '1399/01/01';
+    //obj.EndDate = '1399/01/30';
+    //obj.SaleTypeCode = 1;
+    //obj.DayDeadline = 1;
+    //this.results.push(obj);
   }
   addSaleDeadline(saleDeadline: SaleDeadlineModel)
   {
@@ -17,11 +17,11 @@ export class SaleDeadlineService {
     obj.EndDate = saleDeadline.StartDate;
     obj.SaleTypeCode = saleDeadline.SaleTypeCode;
     obj.DayDeadline = saleDeadline.DayDeadline;
-    this.results.push(obj);
+    //this.results.push(obj);
   }
 
   getSaleDeadline(): SaleDeadlineModel[]
   {
-     return this.results;
+      return null;
   }
 }
