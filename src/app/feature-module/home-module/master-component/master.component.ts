@@ -15,6 +15,9 @@ export class MasterHomeComponent extends BaseComponent {
     onLogin(){
         this.router.navigate(["login"]);
     }
+    onSaleDeadline(){
+      this.router.navigate(["pages/list"]);
+  }
 
     onMaster(){
         this.router.navigate([""]);

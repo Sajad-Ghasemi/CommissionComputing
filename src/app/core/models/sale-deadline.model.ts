@@ -1,9 +1,7 @@
 
 export class SaleDeadlineModel {
 
-  SaleTypeCode: number;
-  StartDate: string;
-  EndDate: string;
-  DayDeadline: number;
+  constructor( public SaleTypeCode: number, public StartDate: string,public EndDate: string,public DayDeadline: number){}
+
 
 }

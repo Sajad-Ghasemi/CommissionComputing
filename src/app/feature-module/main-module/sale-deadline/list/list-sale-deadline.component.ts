@@ -11,7 +11,7 @@ import { SaleDeadlineModel } from 'src/app/core/models/sale-deadline.model';
 })
 export class ListSaleDeadlineComponent extends BaseComponent implements OnInit{
 
-  list: SaleDeadlineModel[];
+  list: Array<SaleDeadlineModel> = [];
   constructor(private service: SaleDeadlineService){
 super();
   }
