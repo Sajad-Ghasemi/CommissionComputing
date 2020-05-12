@@ -5,18 +5,18 @@ import { AuthenticationGuard } from './core/guards/authentication.guard';
 
 
 const routes: Routes = [
-  { 
-    path: '', 
-    loadChildren: () => import('./feature-module/home-module/home.module').then(m => m.HomeModule) 
+  {
+    path: '',
+    loadChildren: () => import('./feature-module/home-module/home.module').then(m => m.HomeModule)
   },
-  { 
-    path: 'pages', 
-    loadChildren: () => import('./feature-module/main-module/main.module').then(m => m.MainModule), 
-    canActivate: [AuthenticationGuard] 
+  {
+    path: 'pages',
+    loadChildren: () => import('./feature-module/main-module/main.module').then(m => m.MainModule),
+    canActivate: [AuthenticationGuard]
   },
-  { 
-    path: '**', 
-    component: NotFoundComponent 
+  {
+    path: '**',
+    component: NotFoundComponent
   }
 ];
 
