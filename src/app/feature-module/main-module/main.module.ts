@@ -8,20 +8,22 @@ import { DashboardComponent } from './dashboard-component/dashboard.component';
 import { LibModule } from '../lib-module';
 import { AddSaleDeadlineComponent } from './sale-deadline/add/add-sale-deadline.component';
 import { MatSelectModule } from '@angular/material';
+import { AddFactorComponent } from './factor/add/add-factor.component';
 
 
 @NgModule({
-  declarations: [
-    MasterComponent,
-    DashboardComponent,
-    AddSaleDeadlineComponent,
-    ListSaleDeadlineComponent
-  ],
-  imports: [
-    MainRoutingModule,
-    LibModule
-  ],
-  providers: [SaleDeadlineService],
-  bootstrap: []
+    declarations: [
+        MasterComponent,
+        DashboardComponent,
+        AddSaleDeadlineComponent,
+        ListSaleDeadlineComponent,
+        AddFactorComponent
+    ],
+    imports: [
+        MainRoutingModule,
+        LibModule
+    ],
+    providers: [SaleDeadlineService],
+    bootstrap: []
 })
 export class MainModule { }
