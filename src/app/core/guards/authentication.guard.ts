@@ -10,6 +10,7 @@ export class AuthenticationGuard implements CanActivate {
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | import("@angular/router").UrlTree | import("rxjs").Observable<boolean | import("@angular/router").UrlTree> | Promise<boolean | import("@angular/router").UrlTree> {
         let token = this.storageService.getItem(StorageService.TOKEN_KEY);
+        token = "";
         if (token == null || token == undefined) {
             this.router.navigate(["/login"]);
             return false;

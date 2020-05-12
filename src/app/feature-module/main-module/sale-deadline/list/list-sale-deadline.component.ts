@@ -9,10 +9,10 @@ import { SaleDeadlineModel } from 'src/app/core/models/sale-deadline.model';
     selector: 'app-list-sale-deadline',
     templateUrl: './list-sale-deadline.component.html'
 })
-export class ListSaleDeadlineComponent extends BaseComponent implements OnInit{
+export class ListSaleDeadlineComponent extends BaseComponent implements OnInit {
 
   list: Array<SaleDeadlineModel> = [];
-  constructor(private service: SaleDeadlineService){
+  constructor(private service: SaleDeadlineService) {
 super();
   }
 

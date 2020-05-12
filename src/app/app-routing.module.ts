@@ -12,7 +12,6 @@ const routes: Routes = [
   {
     path: 'pages',
     loadChildren: () => import('./feature-module/main-module/main.module').then(m => m.MainModule),
-    canActivate: [AuthenticationGuard]
   },
   {
     path: '**',

@@ -46,3 +46,6 @@ testem.log
 Thumbs.db
 /.vs/slnx.sqlite
 /.vs/slnx.sqlite-journal
+/.vs/VSWorkspaceState.json
+/.vs/Commission/v16/.suo
+/.vs/Commission/config/applicationhost.config

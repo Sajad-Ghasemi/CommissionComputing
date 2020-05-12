@@ -3,7 +3,6 @@ export class SaleDeadlineService {
   results: Array<SaleDeadlineModel> = [];
 
   constructor(){
-
     const obj: SaleDeadlineModel = {
     StartDate: '1399/01/01',
     EndDate: '1399/01/30',
