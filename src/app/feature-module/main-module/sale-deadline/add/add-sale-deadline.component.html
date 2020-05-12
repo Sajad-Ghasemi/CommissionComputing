@@ -1,0 +1,28 @@
+<div class="example-container">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>از تاریخ:</mat-label>
+      <input matInput required controlName="startDate">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" >
+      <mat-label>تا تاریخ:</mat-label>
+      <input matInput required controlName="endDate">
+    </mat-form-field>
+    <mat-form-field appearance="fill" >
+      <mat-label>مهلت:</mat-label>
+      <input matInput required controlName="deadlineDay">
+    </mat-form-field>
+    <mat-form-field appearance="fill" controlName="ddlSaleType">
+      <mat-select required>
+        <mat-option>انتخاب کنید</mat-option>
+        <mat-option value="1">نقدی</mat-option>
+        <mat-option value="2">نمایشگاهی</mat-option>
+        <mat-option value="3">یک ماهه</mat-option>
+        <mat-option value="4">دو ماهه</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button mat-raised-button type="submit" color="primary">ثبت</button>
+  </form>
+</div>
