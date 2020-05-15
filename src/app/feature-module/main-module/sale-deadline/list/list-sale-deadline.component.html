@@ -1,19 +1,41 @@
-<table>
-  <tr>
-    <td>نوع فروش</td>
-    <td>از تاریخ</td>
-    <td>تا تاریخ</td>
-    <td>مهلت</td>
-    <td>عملیات</td>
-  </tr>
-  <tr *ngFor="let item of list">
-    <td>{{item.SaleTypeCode}}</td>
-    <td>{{item.StartDate}}</td>
-    <td>{{item.EndDate}}</td>
-    <td>{{item.DayDeadline}}</td>
-    <td>
-      <a onclick="edit(item)">ویرایش</a>&nbsp;
-      <a onclick="delete(item)">حذف</a>
-    </td>
-  </tr>
-</table>
+<i class="material-icons" (click)="add()">add</i>
+  <div class="mat-elevation-z8">
+    <mat-form-field>
+      <mat-label>فیلتر ردیف ها</mat-label>
+      <input matInput (keyup)="applyFilter($event)">
+    </mat-form-field>
+    <table mat-table [dataSource]="dataSource" matSort>
+      <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef  mat-sort-header> ردیف </th>
+        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+      </ng-container>
+      <ng-container matColumnDef="SaleTypeCode">
+        <th mat-header-cell *matHeaderCellDef  mat-sort-header> نوع فروش </th>
+        <td mat-cell *matCellDef="let element"> {{element.SaleTypeCode}} </td>
+      </ng-container>
+      <ng-container matColumnDef="StartDate">
+        <th mat-header-cell *matHeaderCellDef  mat-sort-header> از تاریخ </th>
+        <td mat-cell *matCellDef="let element"> {{element.StartDate}} </td>
+      </ng-container>
+      <ng-container matColumnDef="EndDate">
+        <th mat-header-cell *matHeaderCellDef  mat-sort-header> تا تاریخ </th>
+        <td mat-cell *matCellDef="let element"> {{element.EndDate}} </td>
+      </ng-container>
+      <ng-container matColumnDef="DayDeadline">
+        <th mat-header-cell *matHeaderCellDef  mat-sort-header> مهلت تسویه </th>
+        <td mat-cell *matCellDef="let element"> {{element.DayDeadline}} </td>
+      </ng-container>
+    <ng-container matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef>عملیات</th>
+      <td mat-cell *matCellDef="let element">
+        <i class="material-icons" (click)="delete(element)">delete</i>
+        <i class="material-icons" (click)="edit(element)">edit</i>
+      </td>
+    </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns">zzz</tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>

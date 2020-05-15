@@ -20,7 +20,7 @@ export class AddFactorComponent extends BaseComponent implements OnInit {
 
 
 }
-export interface PeriodicElement {
+export class PeriodicElement {
     name: string;
     position: number;
     weight: number;

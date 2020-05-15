@@ -1,37 +1,48 @@
 import { SaleDeadlineService } from './../../../../core/http-services/sale-deadline.service';
 import { BaseComponent } from 'src/app/feature-module/base.component';
-import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { Component, Inject, OnInit } from '@angular/core';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { SaleDeadlineModel } from 'src/app/core/models/sale-deadline.model';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
     selector: 'app-sale-deadline',
     templateUrl: './add-sale-deadline.component.html'
 })
-export class AddSaleDeadlineComponent extends BaseComponent {
+export class AddSaleDeadlineComponent extends BaseComponent implements OnInit {
 
-  constructor(private fb: FormBuilder, private service: SaleDeadlineService){
-super();
+  constructor(private fb: FormBuilder, private service: SaleDeadlineService, public dialogRef: MatDialogRef<AddSaleDeadlineComponent>) {
+    super();
   }
-
-  form = this.fb.group({
-startDate: [''],
-endDate: [''],
-ddlSaleType: [''],
-deadlineDay: ['']
-
-  });
-
-  onSubmit()
-  {
-    let saleDeadline: SaleDeadlineModel = {
-      DayDeadline: this.form.controls['deadlineDay'].value,
-      EndDate: this.form.controls['endDate'].value,
-      StartDate: this.form.controls['startDate'].value,
-      SaleTypeCode: this.form.controls['ddlSaleType'].value,
+  form: FormGroup;
+  ngOnInit(): void {
+   this.form = this.fb.group({
+      txtStartDate: ['', Validators.required],
+      txtEndDate: ['', Validators.required],
+      ddlSaleType: ['', Validators.required],
+      txtDeadlineDay: ['', Validators.required]
+    });
+  }
+  selectedValue:number;
+  onSubmit() {
+      const saleDeadline: SaleDeadlineModel = {
+      DayDeadline: this.form.controls.txtDeadlineDay.value,
+      EndDate: this.form.controls.txtEndDate.value,
+      StartDate: this.form.controls.txtStartDate.value,
+      SaleTypeCode: this.selectedValue,
     };
 
-    this.service.addSaleDeadline(saleDeadline);
-
+      this.service.addSaleDeadline(saleDeadline);
+      this.dialogRef.close();
   }
+  getSelectedValue(data)
+  {
+    this.selectedValue = this.clients[data].id;
+  }
+  clients = [
+    { id : 1, clientName: 'نمایشگاهی'},
+    { id : 2, clientName: 'نقدی'},
+    { id : 3, clientName: 'یک ماهه'},
+    { id : 4, clientName: 'دو ماهه'}
+  ];
 }

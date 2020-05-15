@@ -30,7 +30,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
         ReactiveFormsModule,
         MatDividerModule,
         MatTableModule,
-        MatPaginatorModule
+        MatPaginatorModule,
     ],
     exports: [
         CommonModule,
