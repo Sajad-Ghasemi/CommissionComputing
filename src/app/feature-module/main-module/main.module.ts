@@ -1,3 +1,4 @@
+import { AddCommissionComponent } from './Commission/add/add-commission.component';
 import { SaleDeadlineService } from './../../core/http-services/sale-deadline.service';
 import { ListSaleDeadlineComponent } from './sale-deadline/list/list-sale-deadline.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -10,6 +11,7 @@ import { AddSaleDeadlineComponent } from './sale-deadline/add/add-sale-deadline.
 import { MatSelectModule, MatButtonModule } from '@angular/material';
 import { AddFactorComponent } from './factor/add/add-factor.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ListCommissionComponent } from './Commission/list/list-commission.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { ReactiveFormsModule } from '@angular/forms';
         DashboardComponent,
         AddSaleDeadlineComponent,
         ListSaleDeadlineComponent,
-        AddFactorComponent
+        AddFactorComponent,
+        AddCommissionComponent,
+        ListCommissionComponent
     ],
     imports: [
         MainRoutingModule,

@@ -8,17 +8,19 @@ import { Router } from '@angular/router';
     styleUrls: ['master.component.scss']
 })
 export class MasterHomeComponent extends BaseComponent {
-    constructor(private router: Router){
+    constructor(private router: Router) {
         super();
     }
 
     onLogin(){
-        this.router.navigate(["login"]);
+        this.router.navigate(['login']);
     }
-    onSaleDeadline(){
+    onSaleDeadline() {
       this.router.navigate(['pages/deadline/list']);
-  }
-
+    }
+    onCommission() {
+      this.router.navigate(['pages/commission/list']);
+    }
     onMaster(){
         this.router.navigate([""]);
     }
