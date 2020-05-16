@@ -49,7 +49,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
         MatDividerModule,
         OnlyNumberDirective,
         MatTableModule,
-        MatPaginatorModule
+        MatPaginatorModule,
     ],
     providers: [],
     bootstrap: []

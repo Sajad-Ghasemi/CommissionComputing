@@ -12,7 +12,7 @@ import { MatSelectModule, MatButtonModule } from '@angular/material';
 import { AddFactorComponent } from './factor/add/add-factor.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ListCommissionComponent } from './Commission/list/list-commission.component';
-
+import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 
 @NgModule({
     declarations: [
@@ -28,8 +28,8 @@ import { ListCommissionComponent } from './Commission/list/list-commission.compo
         MainRoutingModule,
         LibModule,
         MatButtonModule,
-        ReactiveFormsModule
-
+        ReactiveFormsModule,
+        NgxMatSelectSearchModule
     ],
     providers: [SaleDeadlineService],
     bootstrap: []

@@ -1,0 +1,11 @@
+<div style="margin-top: 50px;margin-right: 50px;">
+  <mat-form-field>
+    <mat-select [formControl]="control" ngDefaultControl placeholder="پیش فاکتور" #Select>
+        <ngx-mat-select-search [placeholderLabel]="'جستجو...'" [noEntriesFoundLabel]="'گزینه ای یافت نشد!'" [formControl]="control"
+         ngDefaultControl></ngx-mat-select-search>
+        <mat-option class="m-t" *ngFor="let obj of filteredRecords | async" [value]="obj">
+            {{obj}}
+        </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
