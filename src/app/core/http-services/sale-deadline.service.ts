@@ -7,10 +7,10 @@ export class SaleDeadlineService {
 
   addSaleDeadline(saleDeadline: SaleDeadlineModel) {
     const obj: SaleDeadlineModel = {
-    StartDate: saleDeadline.StartDate,
-    EndDate: saleDeadline.EndDate,
-    SaleTypeCode: saleDeadline.SaleTypeCode,
-    DayDeadline: saleDeadline.DayDeadline
+    startDate: saleDeadline.startDate,
+    endDate: saleDeadline.endDate,
+    saleTypeCode: saleDeadline.saleTypeCode,
+    dayDeadline: saleDeadline.dayDeadline
   };
     this.results.push(obj);
   }

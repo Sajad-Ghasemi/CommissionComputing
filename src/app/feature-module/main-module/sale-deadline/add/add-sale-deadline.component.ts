@@ -26,10 +26,10 @@ export class AddSaleDeadlineComponent extends BaseComponent implements OnInit {
   selectedValue:number;
   onSubmit() {
       const saleDeadline: SaleDeadlineModel = {
-      DayDeadline: this.form.controls.txtDeadlineDay.value,
-      EndDate: this.form.controls.txtEndDate.value,
-      StartDate: this.form.controls.txtStartDate.value,
-      SaleTypeCode: this.selectedValue,
+      dayDeadline: this.form.controls.txtDeadlineDay.value,
+      endDate: this.form.controls.txtEndDate.value,
+      startDate: this.form.controls.txtStartDate.value,
+      saleTypeCode: this.selectedValue,
     };
 
       this.service.addSaleDeadline(saleDeadline);
