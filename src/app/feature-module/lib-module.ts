@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDividerModule } from '@angular/material/divider';
 import { OnlyNumberDirective } from '../core/directives/only-number.directive';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 
 @NgModule({
     declarations: [
@@ -31,6 +32,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
         MatDividerModule,
         MatTableModule,
         MatPaginatorModule,
+        NgxMatSelectSearchModule
     ],
     exports: [
         CommonModule,
@@ -50,6 +52,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
         OnlyNumberDirective,
         MatTableModule,
         MatPaginatorModule,
+        NgxMatSelectSearchModule
     ],
     providers: [],
     bootstrap: []
